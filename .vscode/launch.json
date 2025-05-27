@@ -1,0 +1,49 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Generate Synthetic Data",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/generate_data.py",
+      "envFile": "${workspaceFolder}/.env",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Load to Vector DB",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/load_to_vector_db.py",
+      "envFile": "${workspaceFolder}/.env",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Run Pseudo UI",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/interface.py",
+      "envFile": "${workspaceFolder}/.env",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Run Semantic Search",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/run_search.py",
+      "envFile": "${workspaceFolder}/.env",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "console": "integratedTerminal"
+    }
+  ]
+}
