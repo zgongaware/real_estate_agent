@@ -12,4 +12,3 @@ tiktoken==0.4.0
 # Additional requirements
 pandas
 python-dotenv
-jinja2
