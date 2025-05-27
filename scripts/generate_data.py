@@ -6,3 +6,6 @@ from src.data_generation.generator import generate_synthetic_data
 
 if __name__ == "__main__":
     generate_synthetic_data(n=30)
+
+
+

@@ -33,18 +33,14 @@ def generate_synthetic_data(n: int = 25) -> None:
         full_output = generate_listing(seed=seed, model=llm)
         results.append(full_output)
 
-    # Save results to pickle file
-    output_path = pathlib.Path("data/real_estate_listings.pkl")
+    # Save results to CSV file
+    output_path = pathlib.Path("data/real_estate_listings.csv")
+    df = pd.DataFrame(results, columns=["listing"])
     if output_path.exists():
-        # Load existing data and append new results
-        with open(output_path, "rb") as f:
-            existing_results = pickle.load(f)
-        all_results = existing_results + results
-    else:
-        all_results = results
-
-    with open(output_path, "wb") as f:
-        pickle.dump(all_results, f)
+        # Append new results to existing CSV
+        existing_df = pd.read_csv(output_path)
+        df = pd.concat([existing_df, df], ignore_index=True)
+    df.to_csv(output_path, index=False)
 
 
 def generate_prompt_template_base() -> Template:
@@ -125,12 +121,3 @@ def generate_listing(seed: dict, model: OpenAI) -> str:
     filled_prompt = template.render(**seed)
     response = model.predict(filled_prompt)
     return response.strip()
-
-
-def load_real_estate_listings(filepath='real_estate_listings.pkle'):
-    """
-    Loads real estate listings from a pickle file.
-    """
-    with open(filepath, 'rb') as f:
-        data = pickle.load(f)
-    return data
