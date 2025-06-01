@@ -14,17 +14,18 @@ House Finder 2001 is a real estate listing application that helps users search, 
 ```
 real_estate_agent/
 ├── scripts/
-│   ├── streamlit_app.py      # Main Streamlit application entry point
-│   ├── generate_data.py      # Script for generating synthetic real estate listing data
+│   ├── streamlit_app.py        # Main Streamlit application entry point
+│   └── generate_data.py        # Script for generating synthetic real estate listing data
 ├── src/
-│   ├── data_generation
-│       ├── data_generator.py   # Functions for generating synthetic data
-│   ├── interface
-│       ├── pseudo_ui.py        # Functions for collecting user preferences via streamlit UI
-│   ├── search
-│       ├── search_engine.py    # Functions for performing semantic search on vector database
-│   ├── vector_db
-│       ├── vectorization.py    # Functions for instantiating and population vector database
+│   ├── data_generation/
+│   │   └── data_generator.py   # Functions for generating synthetic data
+│   ├── interface/
+│   │   └── pseudo_ui.py        # Functions for collecting user preferences via Streamlit UI
+│   ├── search/
+│   │   └── search_engine.py    # Functions for performing semantic search on vector database
+│   └── vector_db/
+│       └── vectorization.py    # Functions for instantiating and populating vector database
+├── requirements.txt            # Python package requirements
 ```
 
 ## Installation
