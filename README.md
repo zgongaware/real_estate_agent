@@ -14,11 +14,11 @@ House Finder 2001 is a real estate listing application that helps users search, 
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/house-finder-2001.git
+    git clone https://github.com/zgongaware/real_estate_agent.git
     ```
 2. Navigate to the project directory:
     ```bash
-    cd house-finder-2001
+    cd real_estate_agent
     ```
 3. (Optional) Create and activate a virtual environment:
     ```bash

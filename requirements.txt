@@ -12,3 +12,4 @@ tiktoken==0.4.0
 # Additional requirements
 pandas
 python-dotenv
+streamlit
